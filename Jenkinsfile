@@ -10,7 +10,7 @@ pipeline {
             steps {
                 git branch: 'main',
                     credentialsId: "${GIT_CREDENTIALS}",
-                    url: 'https://github.com/jyoti-gupta28/Databricks-CI-POC.git'
+                    url: 'https://github.com/Rajaahirwal00/Databricks-CI-POC1.git'
             }
         }
 
