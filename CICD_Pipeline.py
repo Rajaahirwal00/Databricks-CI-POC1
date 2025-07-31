@@ -4,7 +4,7 @@
 
 def extract_data():
     print("Extracting data...")
-    data = [11, 20, 30, 40, 50,101,200,300,900]
+    data = [11, 20, 30, 40, 50,101,200,300,90]
     return data
 
 def transform_data(data):
@@ -25,7 +25,6 @@ def main():
     load_data(transformed)
     print("Pipeline completed successfully!")
     print("Raja Your First Pipeline Successful")
-    print("Hello")
 
 if __name__ == "__main__":
     main()
