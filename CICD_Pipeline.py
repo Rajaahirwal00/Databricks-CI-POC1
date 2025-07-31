@@ -24,8 +24,8 @@ def main():
     transformed = transform_data(data)
     load_data(transformed)
     print("Pipeline completed successfully!")
-    print("Raja Your First Pipeline Successful")
-    print("Hello")
+    print("Dev Branch Pipeline Successful")
+
 
 if __name__ == "__main__":
     main()
