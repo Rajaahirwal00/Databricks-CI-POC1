@@ -8,7 +8,7 @@ pipeline {
     stages {
         stage('Checkout Code') {
             steps {
-                git branch: 'main',
+                git branch: 'dev',
                     credentialsId: "${GIT_CREDENTIALS}",
                     url: 'https://github.com/Rajaahirwal00/Databricks-CI-POC1.git'
             }
