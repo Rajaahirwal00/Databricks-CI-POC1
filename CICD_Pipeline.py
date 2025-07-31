@@ -4,7 +4,7 @@
 
 def extract_data():
     print("Extracting data...")
-    data = [10, 20, 30, 40, 50,60,100,200]
+    data = [10, 20, 30, 40, 50,60,100,200,300]
     return data
 
 def transform_data(data):
