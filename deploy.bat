@@ -47,5 +47,4 @@ IF %ERRORLEVEL% NEQ 0 (
 
 echo ===== ✅ Deployment Completed Successfully! =====
 
-:: Ensure the script exits cleanly
-exit /b 0
+
