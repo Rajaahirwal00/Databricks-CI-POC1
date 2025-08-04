@@ -1,4 +1,7 @@
-@echo off
+@echo on
+echo === AZURE_CLIENT_ID: %AZURE_CLIENT_ID%
+echo === AZURE_CLIENT_SECRET: %AZURE_CLIENT_SECRET%
+echo === AZURE_TENANT_ID: %AZURE_TENANT_ID%
 
 echo ===== Step 1: Azure Login =====
 az login --service-principal -u %AZURE_CLIENT_ID% -p %AZURE_CLIENT_SECRET% --tenant %AZURE_TENANT_ID%
@@ -33,11 +36,6 @@ IF %ERRORLEVEL% NEQ 0 (
 echo Docker push successful.
 
 echo ===== Step 5: Deploy to AKS =====
-kubectl apply -f deployment.yaml
-IF %ERRORLEVEL% NEQ 0 (
-    echo Deployment.yaml apply failed!
-    exit /b 1
-)
 
 kubectl apply -f job.yaml
 IF %ERRORLEVEL% NEQ 0 (
