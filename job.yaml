@@ -1,0 +1,13 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: databricks-pipeline-job
+spec:
+  template:
+    spec:
+      containers:
+      - name: databricks-job-container
+        image: cicdpocregistry.azurecr.io/databricks-pipeline:latest
+        command: ["python", "CICD_Pipeline.py"]
+      restartPolicy: Never
+  backoffLimit: 1
