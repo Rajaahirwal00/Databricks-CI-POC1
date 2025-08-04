@@ -1,19 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: cicd-app
+  name: databricks-app
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: cicd-app
+      app: databricks
   template:
     metadata:
       labels:
-        app: cicd-app
+        app: databricks
     spec:
       containers:
-      - name: cicd-container
-        image: cicd-python-app
-        imagePullPolicy: Never
-        command: ["python", "CICD_Pipeline.py"]
+      - name: databricks-container
+        image: cicdpocregistry.azurecr.io/myapp:v1
+        ports:
+        - containerPort: 5000  # change if your app runs on a different port
