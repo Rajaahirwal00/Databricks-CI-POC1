@@ -6,8 +6,9 @@ IF %ERRORLEVEL% NEQ 0 (
     echo Azure login failed!
     exit /b 1
 )
+echo "Step 2 reached"
 echo Azure login successful.
-
+echo "Step 2 reached"
 echo ===== Step 2: ACR Login =====
 az acr login --name cicdpocregistry
 IF %ERRORLEVEL% NEQ 0 (
