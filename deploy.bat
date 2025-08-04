@@ -3,6 +3,11 @@ echo === AZURE_CLIENT_ID: %AZURE_CLIENT_ID%
 echo === AZURE_CLIENT_SECRET: %AZURE_CLIENT_SECRET%
 echo === AZURE_TENANT_ID: %AZURE_TENANT_ID%
 
+az acr login --name cicdpocregistry
+IF %ERRORLEVEL% NEQ 0 (
+    echo ACR login failed!
+    exit /b 1
+)
 echo ===== Step 1: Azure Login =====
 az login --service-principal -u %AZURE_CLIENT_ID% -p %AZURE_CLIENT_SECRET% --tenant %AZURE_TENANT_ID%
 echo Azure login successful.
